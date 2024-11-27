@@ -1,0 +1,61 @@
+/* Basic reset and center the content */
+body,
+html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    display: flex;
+    background-color: #303885;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+/* Style the play button */
+#play_btn {
+    width: 100px;
+    height: 100px;
+    background-color: #3dc95e;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    font-size: 36px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+/* Hover effect for play button */
+.play_btn:hover {
+    background-color: #126424;
+}
+
+/* Pulse circle style (initially hidden) */
+#pulse_circle {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-color: #c02cff;
+    display: none;
+    animation: pulseAnimation 0.5s ease-out infinite;
+}
+
+/* Keyframes for pulsing effect */
+@keyframes pulseAnimation {
+    0% {
+        transform: scale(1);
+        opacity: 1;
+    }
+
+    50% {
+        transform: scale(1.3);
+        opacity: 0.7;
+    }
+
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
